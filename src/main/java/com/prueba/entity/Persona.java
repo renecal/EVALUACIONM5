@@ -30,6 +30,9 @@ public class Persona {
 	
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
+    
+    @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
+    private User user;
 	
 	public Persona() {}
 	
@@ -91,7 +94,18 @@ public class Persona {
 	public void setSisPrevision(String sisPrevision) {
 		this.sisPrevision = sisPrevision;
 	}
+	
+	
 
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
 
 	@Override
 	public int hashCode() {
