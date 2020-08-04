@@ -13,7 +13,7 @@ import com.prueba.entity.RegistroAccidente;
 import com.prueba.interfaceService.IRegistroAccidenteService;
 
 @Controller
-@RequestMapping
+@RequestMapping("/registros")
 public class RegistroAccController {
 
 	@Autowired
@@ -23,7 +23,12 @@ public class RegistroAccController {
 	public String listarRegistroAccidente(Model model) {
 	    List<RegistroAccidente> regAccidente = rAccService.listarAccidente();
 	    model.addAttribute("key", regAccidente);
-	    return "index";
+	    return "registrosaccidente";
 	} 
+	
+	@GetMapping("/nuevo")
+	public String agregarRegistroAccidente() {
+		return "nuevo";
+	}
 	
 }

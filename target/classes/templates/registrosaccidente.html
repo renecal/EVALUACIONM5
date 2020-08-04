@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ver Accidentes</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+</head>
+<body>
+<header th:insert="fragments/header::navbar" ></header>
+	<div class="container-fluid">
+		<div class="row mx-auto">
+			<div class="col-md-12 mx-auto">
+				<div class="card shadow">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h2 class="py-4 mt-4 text-center">HISTORIAL DE ACCIDENTES</h2>
+							</div>
+						</div>
+						<div class="row">
+								<button class="btn btn-success" data-toggle="modal"
+									data-target="#agregarPersonaModal">
+									<i class="fa fa-plus"></i>
+								</button>
+						</div>
+						<div class="row">
+							<table id="verAccidente" class="col-md-12 table table-hover">
+								<thead>
+									<tr class="bg-primary text-light">
+										<th>#</th>
+										<th scope="col">ID DB</th>
+										<th scope="col">Registrante</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Apellido</th>
+										<th scope="col">Cargo</th>
+										<th scope="col">Teléfono</th>
+										<th scope="col">Dirección</th>
+										<th scope="col">Fecha</th>
+										<th scope="col">Previsión</th>
+										<th scope="col">Tipo</th>
+										<th scope="col">Descripción</th>
+										<th scope="col">Acciones</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr th:each="item,iterator:${key}">
+										<td th:text="${iterator.index+1}"></td>
+										<td th:text="${item.id}"></td>
+										<td>Usuario</td>
+										<td th:text="${item.persona.nombre}"></td>
+										<td th:text="${item.persona.apellido}"></td>
+										<td th:text="${item.cargo}"></td>
+										<td th:text="${item.persona.telefono}"></td>
+										<td th:text="${item.persona.direccion}"></td>
+										<td th:text="${item.fecha}"></td>
+										<td th:text="${item.persona.sisPrevision}"></td>
+										<td th:text="${item.tipoAccidente.tAccidente}"></td>
+										<td th:text="${item.descripcion}"></td>
+										<td>
+											<form action="controlador" method="post">
+												<input type="hidden" name="id" value="${datos.getsId_Acc()}">
+												<button type="submit" name="accion" value="Editar"
+													class="btn btn-primary">Editar</button>
+												<button type="submit" name="accion" value="Eliminar"
+													class="btn btn-primary">Eliminar</button>
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<form action="controlador" method="post">
+								<div class="form-group"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</div>
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<script
+			src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+		<script
+			src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"
+			charset="UTF-8"></script>
+</body>
+</html>
