@@ -16,11 +16,64 @@
 	href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.css">
+	
+<link rel="stylesheet"
+	href="../static/css/style.css">
+	<link th:href="@{/static/css/style.css}" rel="stylesheet" />
 </head>
 <body>
 <header th:insert="fragments/header::navbar" ></header>
-
-		Panel Index
+		<div class="separator-50"></div>
+		<div class="container">
+		<div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Mi Perfil de   </h5>
+                      <a href="${pageContext.request.contextPath}/perfil" class="btn btn-primary">Ver Perfil</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Accidentes</h5>
+                      <a href="${pageContext.request.contextPath}/accidentes" class="btn btn-primary">Ver Accidentes</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Usuarios</h5>
+                      <a href="${pageContext.request.contextPath}/usuarios" class="btn btn-primary">Ver Usuarios</a>
+                      
+                    </div>
+                  </div>
+            </div>
+              <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Personas</h5>
+                      <a href="${pageContext.request.contextPath}/personas" class="btn btn-primary">Ver Personas</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Roles</h5>
+                      <a href="${pageContext.request.contextPath}/roles" class="btn btn-primary">Ver Roles</a>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+		</div>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
