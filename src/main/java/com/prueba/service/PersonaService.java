@@ -19,6 +19,7 @@ public class PersonaService implements IPersonaService{
 	@Override
 	public List<Persona> listarPersona() {
 		return (List<Persona>)data.findAll();
+		
 	}
 
 	@Override

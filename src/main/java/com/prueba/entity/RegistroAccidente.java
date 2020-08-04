@@ -15,13 +15,17 @@ public class RegistroAccidente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String fAccidente;
+	private String fecha;
 	private String Cargo;
 	private String Descripcion;
 	
 	@ManyToOne (fetch = FetchType.EAGER)
 	@JoinColumn (name = "persona_id")
 	private Persona persona;
+	
+	@ManyToOne (fetch = FetchType.EAGER)
+	@JoinColumn (name = "tipo_accidente_id")
+	private TipoAccidente tipoAccidente;
 	
 	public RegistroAccidente() {}	
 	
@@ -39,22 +43,34 @@ public class RegistroAccidente {
 		return persona;
 	}
 
-
-
 	public void setPersona(Persona persona) {
 		this.persona = persona;
 	}
+	
+	
 
 
 
-	public String getfAccidente() {
-		return fAccidente;
+	public TipoAccidente getTipoAccidente() {
+		return tipoAccidente;
 	}
 
-	public void setfAccidente(String fAccidente) {
-		this.fAccidente = fAccidente;
+
+	public void setTipoAccidente(TipoAccidente tipoAccidente) {
+		this.tipoAccidente = tipoAccidente;
 	}
 
+
+	public void setFecha(String fecha) {
+		this.fecha = fecha;
+	}
+
+
+	public String getFecha() {
+		return fecha;
+	}
+
+	
 	public String getCargo() {
 		return Cargo;
 	}
@@ -98,7 +114,7 @@ public class RegistroAccidente {
 
 	@Override
 	public String toString() {
-		return "RegistroAccidente [id=" + id + ", fAccidente=" + fAccidente + ", Cargo=" + Cargo + ", Descripcion="
+		return "RegistroAccidente [id=" + id + ", fAccidente=" + fecha + ", Cargo=" + Cargo + ", Descripcion="
 				+ Descripcion + "]";
 	}
 	

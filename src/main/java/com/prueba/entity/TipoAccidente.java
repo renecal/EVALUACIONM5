@@ -1,9 +1,13 @@
 package com.prueba.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class TipoAccidente {
@@ -12,6 +16,9 @@ public class TipoAccidente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String tAccidente;
+	
+	@OneToMany(mappedBy = "tipoAccidente", cascade = CascadeType.ALL)
+	public List<RegistroAccidente> registroAcc;
 	
 	public Long getId() {
 		return id;

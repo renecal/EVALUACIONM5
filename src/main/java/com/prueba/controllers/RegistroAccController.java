@@ -18,13 +18,7 @@ public class RegistroAccController {
 
 	@Autowired
 	private IRegistroAccidenteService rAccService; 
-	
-	@GetMapping(value = "/hola")
-	public String index(Model model) {
-		model.addAttribute("titulo", "Hola SPF");
-		return "index";
-	}
-	
+
 	@GetMapping("/listar")
 	public String listarRegistroAccidente(Model model) {
 	    List<RegistroAccidente> regAccidente = rAccService.listarAccidente();

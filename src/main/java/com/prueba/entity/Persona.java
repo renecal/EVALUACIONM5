@@ -27,6 +27,7 @@ public class Persona {
 	private String email;
 	private String telefono;
 	private String sisPrevision;
+	private String direccion;
 	
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
@@ -91,6 +92,14 @@ public class Persona {
 	public void setSisPrevision(String sisPrevision) {
 		this.sisPrevision = sisPrevision;
 	}
+	
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
 
 
 	@Override
@@ -123,6 +132,8 @@ public class Persona {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
 				+ ", telefono=" + telefono + ", sisPrevision=" + sisPrevision + "]";
 	}
+
+
 
 	
 	
