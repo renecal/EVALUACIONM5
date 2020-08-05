@@ -27,13 +27,16 @@ public class Persona {
 	private String email;
 	private String telefono;
 	private String sisPrevision;
+	private String direccion;
+	private String comuna;
+	private String region;
 	
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
 	
 	public Persona() {}
 	
-	public Persona(Long id, String nombre, String apellido, String email, String telefono, String sisPrevision
+	public Persona(Long id, String nombre, String apellido, String email, String telefono, String sisPrevision,String direccion, String comuna, String region 
 			) {
 		super();
 		this.id = id;
@@ -42,6 +45,8 @@ public class Persona {
 		this.email = email;
 		this.telefono = telefono;
 		this.sisPrevision = sisPrevision;
+		this.comuna = comuna;
+		this.region= region;
 	}
 
 	public Long getId() {
@@ -91,7 +96,32 @@ public class Persona {
 	public void setSisPrevision(String sisPrevision) {
 		this.sisPrevision = sisPrevision;
 	}
+	
+	public String getDireccion() {
+		return direccion;
+	}
 
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	
+
+	public String getComuna() {
+		return comuna;
+	}
+
+	public void setComuna(String comuna) {
+		this.comuna = comuna;
+	}
+
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
 
 	@Override
 	public int hashCode() {
@@ -121,8 +151,11 @@ public class Persona {
 	@Override
 	public String toString() {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
-				+ ", telefono=" + telefono + ", sisPrevision=" + sisPrevision + "]";
+				+ ", telefono=" + telefono + ", sisPrevision=" + sisPrevision + ", direccion=" + direccion + ", comuna="
+				+ comuna + ", region=" + region + "]";
 	}
+
+
 
 	
 	
