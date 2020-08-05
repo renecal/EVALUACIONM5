@@ -19,14 +19,24 @@ public class Profesional {
 	private Long id;
 	private String nombre;
 	private String registro;
+	private String cargo;
 	
 	public Profesional() {} 
 	
-	public Profesional(Long id, String nombre, String registro, Set<RegistroAccidente> rAcc) {
+	public Profesional(Long id, String nombre, String registro,String cargo, Set<RegistroAccidente> rAcc) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.registro = registro;
+		this.cargo=cargo;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
 	}
 
 	public Long getId() {
@@ -55,7 +65,7 @@ public class Profesional {
 
 	@Override
 	public String toString() {
-		return "Profesional [id=" + id + ", nombre=" + nombre + ", registro=" + registro + "]";
+		return "Profesional [id=" + id + ", nombre=" + nombre + ", registro=" + registro + ", cargo=" + cargo + "]";
 	}
 	
 }
