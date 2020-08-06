@@ -19,7 +19,7 @@
 	
 <link rel="stylesheet"
 	href="../static/css/style.css">
-	<link th:href="@{/static/css/style.css}" rel="stylesheet" />
+	<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet" />
 </head>
 <body>
 <header th:insert="fragments/header::navbar" ></header>
@@ -29,7 +29,7 @@
             <div class="col-md-3 mb-3">
                 <div class="card shadow bg-warning">
                     <div class="card-body text-center">
-                      <h5 class="card-title">Mi Perfil de   </h5>
+                      <h5 class="card-title">Mi Perfil de </h5>
                       <a href="${pageContext.request.contextPath}/perfil" class="btn btn-primary">Ver Perfil</a>
                       
                     </div>
@@ -39,6 +39,7 @@
             <div class="col-md-3 mb-3">
                 <div class="card shadow bg-warning">
                     <div class="card-body text-center">
+                    
                       <h5 class="card-title">Ver Accidentes</h5>
                       <a href="${pageContext.request.contextPath}/accidentes" class="btn btn-primary">Ver Accidentes</a>
                       

@@ -12,4 +12,12 @@ public class IndexController {
 		return "index";
 		
 	}
+	
+	@GetMapping({"/login", ""})
+	public String login(Model model) {		
+		model.addAttribute("titulo", "Loguearse");
+		return "login";
+		
+	}
 }
+
