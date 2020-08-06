@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5a370989-eff8-4d92-986e-c16ee60a746c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/PruebaMod5V1Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/PruebaMod5V1Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/ServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/ServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/controllers/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/controllers/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/controllers/RegistroAccController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/controllers/RegistroAccController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/Autoridad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/Autoridad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/Persona.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/Persona.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/Profesional.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/Profesional.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/RegistroAccidente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/RegistroAccidente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/TipoAccidente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/TipoAccidente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IPersonaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IPersonaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IProfesionalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IProfesionalService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IRegistroAccidenteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/IRegistroAccidenteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/ITipoAccidenteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/interfaceService/ITipoAccidenteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/repository/PersonaRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/repository/PersonaRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/repository/ProfesionalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/repository/ProfesionalRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/repository/RegistroAccidenteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/repository/RegistroAccidenteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/repository/TipoAccidenteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/repository/TipoAccidenteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/service/PersonaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/service/PersonaService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/service/ProfesionalService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/service/ProfesionalService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/service/RegistroAccidenteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/service/RegistroAccidenteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prueba/service/TipoAccidenteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prueba/service/TipoAccidenteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registrosaccidente.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registrosaccidente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prueba/PruebaMod5V1ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prueba/PruebaMod5V1ApplicationTests.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1fk0vyFFyJtNuB7pTGdHVS7ZgRU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PruebaMod5V1Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="prueba-mod5-v1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.prueba.PruebaMod5V1Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a370989-eff8-4d92-986e-c16ee60a746c" name="Default Changelist" comment="" />
+      <created>1596747017554</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596747017554</updated>
+      <workItem from="1596747030354" duration="5047000" />
+    </task>
+    <task id="LOCAL-00001" summary="Se hace responsiva la tabla, se agrega mensaje en thymeleaf cuando no hay datos en la tabla">
+      <created>1596752733406</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596752733406</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se hace responsiva la tabla, se agrega mensaje en thymeleaf cuando no hay datos en la tabla" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se hace responsiva la tabla, se agrega mensaje en thymeleaf cuando no hay datos en la tabla" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="331" key="GridCell.Tab.0.bottom" timestamp="1596751967232">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596751967232" />
+    <state width="1323" height="331" key="GridCell.Tab.0.center" timestamp="1596751967231">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596751967231" />
+    <state width="1323" height="331" key="GridCell.Tab.0.left" timestamp="1596751967231">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596751967231" />
+    <state width="1323" height="331" key="GridCell.Tab.0.right" timestamp="1596751967231">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596751967231" />
+    <state width="1323" height="331" key="GridCell.Tab.1.bottom" timestamp="1596751967232">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596751967232" />
+    <state width="1323" height="331" key="GridCell.Tab.1.center" timestamp="1596751967232">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1596751967232" />
+    <state width="1323" height="331" key="GridCell.Tab.1.left" timestamp="1596751967232">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1596751967232" />
+    <state width="1323" height="331" key="GridCell.Tab.1.right" timestamp="1596751967232">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="331" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1596751967232" />
+  </component>
+</project>
