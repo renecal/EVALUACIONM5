@@ -1,5 +1,4 @@
 package com.prueba.entity;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -7,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class RegistroAccidente {
@@ -18,10 +17,15 @@ public class RegistroAccidente {
 	private String fecha;
 	private String Cargo;
 	private String Descripcion;
+
 	
 	@ManyToOne (fetch = FetchType.EAGER)
 	@JoinColumn (name = "persona_id")
 	private Persona persona;
+	
+	@ManyToOne (fetch = FetchType.EAGER)
+	@JoinColumn (name = "profesional_id")
+	private Profesional profesional;
 	
 	@ManyToOne (fetch = FetchType.EAGER)
 	@JoinColumn (name = "tipo_accidente_id")
@@ -46,9 +50,16 @@ public class RegistroAccidente {
 	public void setPersona(Persona persona) {
 		this.persona = persona;
 	}
-	
-	
 
+
+	public Profesional getProfesional() {
+		return profesional;
+	}
+
+
+	public void setProfesional(Profesional profesional) {
+		this.profesional = profesional;
+	}
 
 
 	public TipoAccidente getTipoAccidente() {
@@ -78,6 +89,8 @@ public class RegistroAccidente {
 	public void setCargo(String cargo) {
 		Cargo = cargo;
 	}
+	
+	
 
 	public String getDescripcion() {
 		return Descripcion;
