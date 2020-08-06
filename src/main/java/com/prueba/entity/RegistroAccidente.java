@@ -28,6 +28,10 @@ public class RegistroAccidente {
 	private Profesional profesional;
 	
 	@ManyToOne (fetch = FetchType.EAGER)
+	@JoinColumn (name = "user_id")
+	private User user;
+	
+	@ManyToOne (fetch = FetchType.EAGER)
 	@JoinColumn (name = "tipo_accidente_id")
 	private TipoAccidente tipoAccidente;
 	

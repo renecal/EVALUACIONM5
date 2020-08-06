@@ -22,6 +22,7 @@ public class Persona {
 	private String telefono;
 	private String sisPrevision;
 	private String direccion;
+	private String comuna;
 	
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
@@ -128,6 +129,14 @@ public class Persona {
 	public String toString() {
 		return "Persona [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
 				+ ", telefono=" + telefono + ", sisPrevision=" + sisPrevision + "]";
+	}
+
+	public String getComuna() {
+		return comuna;
+	}
+
+	public void setComuna(String comuna) {
+		this.comuna = comuna;
 	}
 
 
