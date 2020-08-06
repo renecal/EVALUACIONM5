@@ -34,7 +34,7 @@
 								<div class="col-md-12 mx-auto">
 									<div class="card shadow">
 										<div class="card-body">
-												<form action="/guardar" th:action="@{/guardar}" method="post">
+												<form action="/registros/add" th:action="@{/registros/add}" th:method="post">
 												<h2 class="pb-4">Ingresar Nuevo Accidente</h2>
 
 
@@ -42,14 +42,14 @@
 													<div class="col-md-6">
 														<label for="">Nombre</label> <input type="text"
 															name="nombreRegistro"
-															value="" required
+															value="" 
 															class="form-control">
 													</div>
 													<div class="col-md-6">
 														<label for="">Apellido</label> <input type="text"
 															name="apellidoRegistro"
 															value=""
-															class="form-control" required>
+															class="form-control" >
 													</div>
 												</div>
 
@@ -58,13 +58,13 @@
 														<label for="">Profesión / Actividad</label> <input
 															type="text" name="cargoRegistro"
 															value=""
-															class="form-control" required>
+															class="form-control" >
 													</div>
 													<div class="col-md-6">
 														<label for="">Teléfono</label> <input type="text"
 															name="telefonoRegistro"
 															value=""
-															class="form-control" required>
+															class="form-control" >
 													</div>
 												</div>
 												<div class="form-group row ">
@@ -72,20 +72,20 @@
 														<label for="">Dirección</label> <input type="text"
 															name="direccionRegistro"
 															value=""
-															class="form-control" required>
+															class="form-control" >
 													</div>
 													<div class="col-md-4">
 														<label for="">Fecha Accidente</label> <input type=date
 															name="fechaRegistro"
 															value=""
-															class="form-control" required>
+															class="form-control" >
 													</div>
 												</div>
 
 												<div class="form-group row">
 													<div class="col-md-6">
 														<label for="">Tipo Accidente</label> <select
-															class="form-control" name="tipoRegistro" required
+															class="form-control" name="tipoRegistro" 
 															value="">
 															<option value="" disabled>Seleccione una opcion</option>
 															<option th:each="item : ${tiposAccidentes}"
@@ -97,7 +97,7 @@
 													</div>
 													<div class="col-md-6">
 														<label for="">Sistema Previsional</label> <select
-															class="form-control" name="sistemaRegistro" required
+															class="form-control" name="sistemaRegistro" 
 															value="${datos.getSistemaAccidentado()}">
 															<option value="" disabled>Seleccione una opcion</option>
 															<option value="1">Isapre</option>
@@ -115,7 +115,7 @@
 
 												<div class="form-group row ">
 													<div class="col-md-7 ">
-														<button class="btn btn-primary btn-lg " name="action"
+														<button class="btn btn-primary btn-lg " name="submit"
 															value="Agregar Accidente" type="submit">Guardar
 															Registro</button>
 													</div>

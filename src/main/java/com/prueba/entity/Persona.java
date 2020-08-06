@@ -2,6 +2,7 @@ package com.prueba.entity;
 
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,19 +17,29 @@ public class Persona {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(nullable = false)
 	private String nombre;
+	@Column(nullable = false)
 	private String apellido;
+	
 	private String email;
+	@Column(nullable = false)
 	private String telefono;
+	@Column(nullable = false)
 	private String sisPrevision;
+	@Column(nullable = false)
 	private String direccion;
+	@Column(nullable = false)
 	private String comuna;
 	
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
     
     @OneToMany(mappedBy = "personaa", cascade = CascadeType.ALL)
-    public List<User> user;
+    public List<Usuario> user;
+    
+    @OneToMany(mappedBy = "personaaa", cascade = CascadeType.ALL)
+    public List<Profesional> profesional;
 	
 	public Persona() {}
 	

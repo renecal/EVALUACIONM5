@@ -8,6 +8,6 @@ public interface IRegistroAccidenteService {
 
 	public List<RegistroAccidente> listarAccidente();
 	public Optional<RegistroAccidente> listarAccidenteId(Long id);
-	public int save (RegistroAccidente rAccidente);
+	public RegistroAccidente save (RegistroAccidente rAccidente);
 	public void delete (Long id);
 }

@@ -1,4 +1,5 @@
 package com.prueba.entity;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,25 +15,28 @@ public class RegistroAccidente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(nullable = false)
 	private String fecha;
+	@Column(nullable = false)
 	private String Cargo;
+	@Column(nullable = false)
 	private String Descripcion;
 
-	
-	@ManyToOne (fetch = FetchType.EAGER)
-	@JoinColumn (name = "persona_id")
+	@ManyToOne (fetch = FetchType.EAGER, optional=false)
+	@JoinColumn (name = "persona_id", nullable=false)
 	private Persona persona;
 	
-	@ManyToOne (fetch = FetchType.EAGER)
-	@JoinColumn (name = "profesional_id")
+	@ManyToOne (fetch = FetchType.EAGER, optional=false)
+	@JoinColumn (name = "profesional_id", nullable=false)
 	private Profesional profesional;
 	
-	@ManyToOne (fetch = FetchType.EAGER)
-	@JoinColumn (name = "user_id")
-	private User user;
+	@ManyToOne (fetch = FetchType.EAGER, optional=false)
+	@JoinColumn (name = "user_id", nullable=false)
+	private Usuario user;
 	
-	@ManyToOne (fetch = FetchType.EAGER)
-	@JoinColumn (name = "tipo_accidente_id")
+	@ManyToOne (fetch = FetchType.EAGER, optional=false)
+	@JoinColumn (name = "tipo_accidente_id", nullable=false)
 	private TipoAccidente tipoAccidente;
 	
 	public RegistroAccidente() {}	
@@ -103,6 +107,16 @@ public class RegistroAccidente {
 	public void setDescripcion(String descripcion) {
 		Descripcion = descripcion;
 	}
+	
+
+	public Usuario getUser() {
+		return user;
+	}
+	
+	public void setUser(Usuario user) {
+		this.user = user;
+	}
+
 
 	@Override
 	public int hashCode() {

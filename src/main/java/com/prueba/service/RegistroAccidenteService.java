@@ -18,28 +18,32 @@ public class RegistroAccidenteService implements IRegistroAccidenteService {
 	@Autowired
 	private RegistroAccidenteRepository data;
 	
-	@Override
 	public List<RegistroAccidente> listarAccidente() {
 		return (List<RegistroAccidente>)data.findAll();
 	}
 
-	@Override
+
 	public Optional<RegistroAccidente> listarAccidenteId(Long id) {
 		return data.findById(id);
 	}
 
-	@Override
-	public int save(RegistroAccidente rAccidente) {
-		int res = 0;
-		RegistroAccidente reAccidente = data.save(rAccidente);
-		if(!reAccidente.equals(null)) {
-			res=1;
-		}
-		return res;
+
+//	public int save(RegistroAccidente rAccidente) {
+//		int res = 0;
+//		RegistroAccidente reAccidente = data.save(rAccidente);
+//		if(!reAccidente.equals(null)) {
+//			res=1;
+//		}
+//		return res;
+//	}
+	
+	public RegistroAccidente save(RegistroAccidente raAccidente) {
+		
+		return data.save(raAccidente);
 	}
 	
 
-	@Override
+
 	public void delete(Long id) {
 		data.deleteById(id);	
 	}

@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.prueba.entity.RegistroAccidente;
@@ -40,6 +42,12 @@ public class RegistroAccController {
 		List<TipoAccidente> tiposAccidentes = tipoAccidenteService.listarTipoAccidente();
 		model.addAttribute("title", "Nuevo Registro de Accidente");
 		model.addAttribute("tiposAccidentes", tiposAccidentes);
+		return "nuevoregistro";
+	}
+	
+	@RequestMapping(value="/add", method = RequestMethod.POST )
+	public String procesarRegistroAccidente(@ModelAttribute("registroModelo") RegistroAccidente regAccidente, Model model) {
+		regAccidente = rAccService.save(regAccidente);
 		return "nuevoregistro";
 	}
 	
