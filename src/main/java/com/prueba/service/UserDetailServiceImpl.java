@@ -1,4 +1,4 @@
-package com.prueba.service;
+/*package com.prueba.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,3 +39,5 @@ public class UserDetailServiceImpl implements UserDetailsService{
 	         return user;
 	    }
 }
+
+*/

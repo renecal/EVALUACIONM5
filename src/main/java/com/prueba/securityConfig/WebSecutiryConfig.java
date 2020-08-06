@@ -1,4 +1,4 @@
-package com.prueba.securityConfig;
+/*package com.prueba.securityConfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +24,7 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	        // define los request y asigna quienes pueden ingresar
 	            .authorizeRequests()
 		        .antMatchers(resources).permitAll()  
-		        .antMatchers("/","/index").permitAll()
+		        //.antMatchers("/","/index").permitAll()
 		        .antMatchers("/admin*").access("hasRole('ADMIN')") // cambiar a panel
 		        .antMatchers("/user*").access("hasRole('USER') or hasRole('ADMIN')") // cambiar a panel user
 	                .anyRequest().authenticated() // cualquier otra request debe estar autenticada
@@ -55,8 +55,9 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	    //Registra el service para usuarios y el encriptador de contrasena
 	    @Autowired
 	    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception { 
-	        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());     
+	        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
 	    }
 	}
 
+*/
 

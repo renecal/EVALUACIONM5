@@ -1,4 +1,4 @@
-package com.prueba.securityUtil;
+/*package com.prueba.securityUtil;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -10,3 +10,5 @@ public class passGenerator {
 		System.out.println(bCryptPasswordEncoder.encode("2222"));
 	}
 }
+
+*/
