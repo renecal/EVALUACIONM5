@@ -28,14 +28,14 @@
 							<div class="col-md-12">
 								<h2 class="py-4 mt-4 text-center">HISTORIAL DE ACCIDENTES</h2>
 							</div>
-						</div>
-						<div class="row">
+
+						<div class=" container col-mb-12">
 								<a class="btn btn-success" th:href="@{/registros/nuevo}">
 									<i class="fa fa-plus"></i>
 								</a>
 						</div>
-						<div class="row">
-							<table id="verAccidente" class="col-md-12 table table-hover">
+						<div class=" container col-mb-12">
+							<table id="verAccidente" class="col-md-12 table table-hover table-responsive">
 								<thead>
 									<tr class="bg-primary text-light">
 										<th>#</th>
@@ -67,7 +67,9 @@
 										<td th:text="${item.persona.sisPrevision}"></td>
 										<td th:text="${item.tipoAccidente.tAccidente}"></td>
 										<td th:text="${item.descripcion}"></td>
+
 										<td>
+
 											<form action="controlador" method="post">
 												<input type="hidden" name="id" value="${datos.getsId_Acc()}">
 												<button type="submit" name="accion" value="Editar"
@@ -78,10 +80,12 @@
 										</td>
 									</tr>
 								</tbody>
+
 							</table>
-							<form action="controlador" method="post">
-								<div class="form-group"></div>
-							</form>
+							<div th:if="${key.isEmpty()}" class="container bg-danger text-white p-2"><div>
+								<div class="center text-center">
+									<h2>No hay datos en la Base de datos</h2></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -89,7 +93,8 @@
 		</div>
 
 </div>
-
+		</div>
+	</div>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script
