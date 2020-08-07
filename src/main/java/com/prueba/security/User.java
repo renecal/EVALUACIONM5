@@ -1,8 +1,9 @@
-package com.prueba.entity;
+package com.prueba.security;
 
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,7 +11,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+<<<<<<< Updated upstream:src/main/java/com/prueba/entity/User.java
 import javax.persistence.ManyToOne;
+=======
+import javax.persistence.ManyToMany;
+
+import com.prueba.security.Authority;
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/User.java
 
 import com.prueba.interfaceService.Autoridad;
 
@@ -20,7 +27,10 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+
+	@Column
 	private String username;
+<<<<<<< Updated upstream:src/main/java/com/prueba/entity/User.java
 	private String pass;
 	private boolean activo;
 	
@@ -33,6 +43,20 @@ public class User {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "persona_id")
 	private Persona persona;
+=======
+
+	@Column
+	private String password;
+
+	@Column
+	private boolean enabled;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "authorities_user", joinColumns = @JoinColumn(name = "usuario_id"), inverseJoinColumns = @JoinColumn(name = "authority_id"))
+	private Set<Authority> authority;
+
+    public User() {}
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/User.java
 
 	public Long getId() {
 		return id;
@@ -50,22 +74,15 @@ public class User {
 		this.username = username;
 	}
 
-	public String getPass() {
-		return pass;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public boolean isActivo() {
-		return activo;
-	}
-
-	public void setActivo(boolean activo) {
-		this.activo = activo;
-	}
-
+<<<<<<< Updated upstream:src/main/java/com/prueba/entity/User.java
 	public Set<Autoridad> getAutoridad() {
 		return autoridad;
 	}
@@ -83,6 +100,23 @@ public class User {
 		this.persona = persona;
 	}
 	
+=======
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
+
+	public Set<Authority> getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(Set<Authority> authority) {
+		this.authority = authority;
+	}
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/User.java
 
 	@Override
 	public int hashCode() {
@@ -111,11 +145,14 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", pass=" + pass + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
 
+<<<<<<< Updated upstream:src/main/java/com/prueba/entity/User.java
 	
 	
 	
 	
+=======
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/User.java
 }

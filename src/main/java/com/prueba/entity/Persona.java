@@ -31,8 +31,13 @@ public class Persona {
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
     
+<<<<<<< Updated upstream
     @OneToMany(mappedBy = "persona", cascade = CascadeType.ALL)
     private User user;
+=======
+   // @OneToMany(mappedBy = "personaa", cascade = CascadeType.ALL)
+   // public List<User> user;
+>>>>>>> Stashed changes
 	
 	public Persona() {}
 	

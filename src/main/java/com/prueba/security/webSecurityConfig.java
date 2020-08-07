@@ -1,4 +1,4 @@
-package com.prueba.securityConfig;
+package com.prueba.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,10 +9,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.prueba.service.UserDetailServiceImpl;
-
 @Configuration
 @EnableWebSecurity
+<<<<<<< Updated upstream:src/main/java/com/prueba/securityConfig/WebSecutiryConfig.java
 public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	 String[] resources = new String[]{
 	            "/include/**","/css/**","/icons/**","/img/**","/js/**","/layer/**"
@@ -20,19 +19,29 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 		
 	    @Override
 	    protected void configure(HttpSecurity http) throws Exception {
+=======
+public class webSecurityConfig extends WebSecurityConfigurerAdapter{
+
+	String[] resources = new String[]{
+            "/include/**","/css/**","/icons/**","/img/**","/js/**","/layer/**"
+   };
+
+	 @Override
+	 protected void configure(HttpSecurity http) throws Exception {
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/webSecurityConfig.java
 	        http
-	        // define los request y asigna quienes pueden ingresar
 	            .authorizeRequests()
 		        .antMatchers(resources).permitAll()  
-		        .antMatchers("/","/index").permitAll()
-		        .antMatchers("/admin*").access("hasRole('ADMIN')") // cambiar a panel
-		        .antMatchers("/user*").access("hasRole('USER') or hasRole('ADMIN')") // cambiar a panel user
-	                .anyRequest().authenticated() // cualquier otra request debe estar autenticada
+		        .antMatchers("/","/login").permitAll()
+		        .antMatchers("/listar*").access("hasRole('ADMIN')")
+		        .antMatchers("/nuevo*").access("hasRole('ADMIN')")
+		        .antMatchers("/panelGeneral*").access("hasRole('USER') or hasRole('ADMIN')")
+	                .anyRequest().authenticated()
 	                .and()
-	            .formLogin() // verificacion del login
+	            .formLogin()
 	                .loginPage("/login")
 	                .permitAll()
-	                .defaultSuccessUrl("/menu")
+	                .defaultSuccessUrl("/panelGeneral")
 	                .failureUrl("/login?error=true")
 	                .usernameParameter("username")
 	                .passwordParameter("password")
@@ -42,7 +51,7 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	                .logoutSuccessUrl("/login?logout");
 	    }
 	    BCryptPasswordEncoder bCryptPasswordEncoder;
-	    //Crea el encriptador de contraseñas	
+	    
 	    @Bean
 	    public BCryptPasswordEncoder passwordEncoder() {
 			bCryptPasswordEncoder = new BCryptPasswordEncoder(4);
@@ -50,13 +59,19 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	    }
 		
 	    @Autowired
+<<<<<<< Updated upstream:src/main/java/com/prueba/securityConfig/WebSecutiryConfig.java
 	    UserDetailServiceImpl userDetailsService;
 		
 	    //Registra el service para usuarios y el encriptador de contrasena
+=======
+	    UserDetailsServiceImpl userDetailsService;
+	
+>>>>>>> Stashed changes:src/main/java/com/prueba/security/webSecurityConfig.java
 	    @Autowired
 	    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception { 
 	        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());     
 	    }
 	}
+
 
 

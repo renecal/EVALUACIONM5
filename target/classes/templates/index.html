@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+<<<<<<< Updated upstream
 	<div class="container mt-4">
 		<table class="table">
 			<thead>
@@ -32,5 +33,77 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+=======
+<form th:action="@{/panel}" method="get">
+<header th:insert="fragments/header::navbar" ></header>
+		<div class="separator-50"></div>
+		<div class="container">
+		<div class="row">
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Mi Perfil de   </h5>
+                      <a href="${pageContext.request.contextPath}/perfil" class="btn btn-primary">Ver Perfil</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Accidentes</h5>
+                      <a href="${pageContext.request.contextPath}/accidentes" class="btn btn-primary">Ver Accidentes</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Usuarios</h5>
+                      <a href="${pageContext.request.contextPath}/usuarios" class="btn btn-primary">Ver Usuarios</a>
+                      
+                    </div>
+                  </div>
+            </div>
+              <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Ver Personas</h5>
+                      <a href="${pageContext.request.contextPath}/personas" class="btn btn-primary">Ver Personas</a>
+                      
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="card shadow bg-warning">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">Roles</h5>
+                      <a href="${pageContext.request.contextPath}/roles" class="btn btn-primary">Ver Roles</a>
+                      
+                    </div>
+                  </div>
+            </div>
+        </div>
+		</div>
+		</form>
+		<form th:action="@{/logout}" method="post">
+            <input type="submit" value="Cerrar Sesion"/>
+        </form>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+		<script
+			src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+		<script
+			src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.min.js"
+			charset="UTF-8"></script>
+>>>>>>> Stashed changes
 </body>
 </html>
