@@ -26,7 +26,7 @@ public class RegistroAccController {
 	private IRegistroAccidenteService rAccService; 
 	@Autowired
 	private ITipoAccidenteService tipoAccidenteService;
-
+	
 
 	
 	@GetMapping("/listar")
@@ -42,13 +42,14 @@ public class RegistroAccController {
 		List<TipoAccidente> tiposAccidentes = tipoAccidenteService.listarTipoAccidente();
 		model.addAttribute("title", "Nuevo Registro de Accidente");
 		model.addAttribute("tiposAccidentes", tiposAccidentes);
+		 model.addAttribute("RegistroModelo", new RegistroAccidente());
 		return "nuevoregistro";
 	}
 	
 	@RequestMapping(value="/add", method = RequestMethod.POST )
 	public String procesarRegistroAccidente(@ModelAttribute("registroModelo") RegistroAccidente regAccidente, Model model) {
 		regAccidente = rAccService.save(regAccidente);
-		return "nuevoregistro";
+		return agregarRegistroAccidente(model);
 	}
 	
 }
