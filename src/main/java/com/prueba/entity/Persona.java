@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.prueba.security.Usuario;
+
 @Entity
 @Table (name="Persona")
 public class Persona {

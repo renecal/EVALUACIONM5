@@ -1,4 +1,4 @@
-/*package com.prueba.service;
+package com.prueba.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.prueba.entity.Autoridad;
-import com.prueba.repository.UserRepository;
-
 @Service
 public class UserDetailServiceImpl implements UserDetailsService{
 
@@ -25,19 +22,18 @@ public class UserDetailServiceImpl implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		com.prueba.entity.User appUser = 
+		Usuario appUser = 
 				userRepository.findByUsername(username).orElseThrow(() -> new UsernameNotFoundException("No existe el Usuario"));
 
 	  @SuppressWarnings("rawtypes")
 	List grantList = new ArrayList();
-	    for (Autoridad authority: appUser.getAutoridad()) {
-	        GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getAutoridad());
+	    for (Authority authority: appUser.getAuthority()) {
+	        GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(authority.getAuthority());
 	            grantList.add(grantedAuthority);
 	    }
 
-	    UserDetails user = (UserDetails) new User(appUser.getUsername(), appUser.getPass(), grantList);
+	    UserDetails user = (UserDetails) new User(appUser.getUsername(), appUser.getPassword(), grantList);
 	         return user;
 	    }
 }
 
-*/

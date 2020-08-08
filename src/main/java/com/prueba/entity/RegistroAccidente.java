@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.prueba.security.Usuario;
+
 
 @Entity
 public class RegistroAccidente {

@@ -1,4 +1,4 @@
-package com.prueba.entity;
+package com.prueba.security;
 
 import java.util.List;
 import java.util.Set;
@@ -16,6 +16,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.prueba.entity.Persona;
+import com.prueba.entity.RegistroAccidente;
+
 @Entity
 public class Usuario {
 
@@ -25,7 +28,7 @@ public class Usuario {
 	@Column(nullable = false)
 	private String username;
 	@Column(nullable = false)
-	private String pass;
+	private String password;
 	@Column(nullable = false)
 	private boolean activo ;
 
@@ -33,11 +36,11 @@ public class Usuario {
 	@JoinTable(name="autoridad_users",
 	joinColumns=@JoinColumn(name="user_id", nullable = false ),
 	inverseJoinColumns=@JoinColumn(name="autoridad_id", nullable = false))
-	private List<Autoridad> autoridad;
+	private List<Authority> authority;
 
 	@ManyToOne(fetch = FetchType.EAGER, optional=false)
 	@JoinColumn(name = "persona_id")
-	private Persona personaa;
+	private Persona persona;
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	public List<RegistroAccidente> registroAcc;
@@ -58,12 +61,12 @@ public class Usuario {
 		this.username = username;
 	}
 
-	public String getPass() {
-		return pass;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPass(String pass) {
-		this.pass = pass;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public boolean isActivo() {
@@ -74,21 +77,21 @@ public class Usuario {
 		this.activo = activo;
 	}
 
-	public List<Autoridad> getAutoridad() {
-		return autoridad;
+	public List<Authority> getAuthority() {
+		return authority;
 	}
 
-	public void setAutoridad(List<Autoridad> autoridad) {
-		this.autoridad = autoridad;
+	public void setAuthority(List<Authority> authority) {
+		this.authority = authority;
 	}
 
 
 	public Persona getPersona() {
-		return personaa;
+		return persona;
 	}
 
 	public void setPersona(Persona persona) {
-		this.personaa = persona;
+		this.persona = persona;
 	}
 
 
@@ -119,7 +122,7 @@ public class Usuario {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", pass=" + pass + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
 
 

@@ -1,4 +1,4 @@
-package com.prueba.entity;
+package com.prueba.security;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,13 +7,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Autoridad {
+public class Authority {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(nullable = false)
-	private String autoridad;
+	private String authority;
 
 	public Long getId() {
 		return id;
@@ -21,11 +21,11 @@ public class Autoridad {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getAutoridad() {
-		return autoridad;
+	public String getAuthority() {
+		return authority;
 	}
-	public void setAutoridad(String autoridad) {
-		this.autoridad = autoridad;
+	public void setAuthority(String authority) {
+		this.authority = authority;
 	}
 
 

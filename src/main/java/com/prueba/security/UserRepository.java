@@ -1,10 +1,8 @@
-package com.prueba.repository;
+package com.prueba.security;
 
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
-
-import com.prueba.entity.Usuario;
 
 
 public interface UserRepository extends CrudRepository<Usuario, Long> {

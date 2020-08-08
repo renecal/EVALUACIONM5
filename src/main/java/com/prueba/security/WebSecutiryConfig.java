@@ -1,4 +1,4 @@
-/*package com.prueba.securityConfig;
+package com.prueba.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +9,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.prueba.service.UserDetailServiceImpl;
 
 @Configuration
 @EnableWebSecurity
@@ -25,8 +24,11 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	            .authorizeRequests()
 		        .antMatchers(resources).permitAll()  
 		        //.antMatchers("/","/index").permitAll()
-		        .antMatchers("/admin*").access("hasRole('ADMIN')") // cambiar a panel
-		        .antMatchers("/user*").access("hasRole('USER') or hasRole('ADMIN')") // cambiar a panel user
+		        .antMatchers("/login").permitAll()
+		        .antMatchers("/index*").access("hasRole('ADMIN')") // cambiar a panel
+		        .antMatchers("/listar*").access("hasRole('ADMIN')")
+		        .antMatchers("/index*").access("hasRole('USER') or hasRole('ADMIN')") // cambiar a panel user
+		        //index2 solo para ejemplificar
 	                .anyRequest().authenticated() // cualquier otra request debe estar autenticada
 	                .and()
 	            .formLogin() // verificacion del login
@@ -59,5 +61,5 @@ public class WebSecutiryConfig extends WebSecurityConfigurerAdapter{
 	    }
 	}
 
-*/
+
 
